@@ -1,0 +1,10 @@
+*  {
+    background-color: orange;
+}
+
+.lyric {
+  font-size: 25px;
+  text-align: center;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
