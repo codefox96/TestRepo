@@ -1,10 +1,17 @@
 *  {
-    background-color: orange;
+    font-size: larger;
+    font-weight: bolder;
+    background-color: #F46D25;
+    color: black;
 }
 
 .lyric {
-  font-size: 25px;
-  text-align: center;
+  /* font-size: 25px; */
+  /* text-align: left; */
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding-left: 0.5em;
   padding-right: 0.5em;
 }

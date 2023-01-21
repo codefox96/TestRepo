@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div className="App">
       {/* Won't show Muzc */}
-      <QuoteContainer />
+      <Muzc />
     </div>
   );
 }

@@ -21,14 +21,11 @@ export default class QuoteContainer extends React.Component {
   }
 
   handleQuote() {
-    fetch("http://localhost:8080/", {
-      method: 'GET',
-      headers: {'Access-Control-Allow-Origin': '*'},
-    })
+    fetch("https://api.kanye.rest/")
       .then(response => response.json())
       .then(data => {
         this.setState({
-          quote: data.lyric
+          quote: data.quote
         });
       })
       .catch(error => {
@@ -39,7 +36,7 @@ export default class QuoteContainer extends React.Component {
   render() {
     const quote = this.state.quote;
     const author = "Kanye West";
-    // const twitterLink = `https://twitter.com/intent/tweet?text=${quote} - Kanye West`;
+    const twitterLink = `https://twitter.com/intent/tweet?text=${quote} - Kanye West`;
 
     return (
       <div className="QuoteContainer" id="quote-box">
@@ -50,7 +47,7 @@ export default class QuoteContainer extends React.Component {
           {author}
         </p>
         <div className="buttons-row">
-          {/* <div className="first-group">
+          <div className="first-group">
             <a
               className="twitter"
               id="tweet-quote"
@@ -60,7 +57,7 @@ export default class QuoteContainer extends React.Component {
             >
               <FontAwesomeIcon icon={faTwitter} />
             </a>
-          </div> */}
+          </div>
           <div className="second-group">
             <button className="cta" onClick={this.handleQuote} id="new-quote">
               New quote
